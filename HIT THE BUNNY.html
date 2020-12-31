@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HIT THE BUNNY </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./hit the bunny.js"></script>
+	<style type="text/css">	
+
+		img{
+			height: 99px;
+			width: 50px;
+			border-radius: 20%;
+		}
+.dot {
+	align-self: center;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  border: groove;
+}
+.end{
+
+}
+div{
+	border: 2px outset red;
+	background-color: black;
+    text-align: center;
+    margin-bottom: 0px;
+    
+}
+</style>
+</head>
+<body bgcolor="green">
+	<center><h1>HIT THE BUNNY.....</h1>
+
+		<p>
+<span id="S1" class="dot"><img onclick="myFunction()" id="I1" class="img" src="./BUNNY.jpg"></span>
+<span id="S2" class="dot"><img onclick="myFunction()" id="I2" class="img" src="./BUNNY.jpg"></span><br>
+<span id="S3" class="dot"><img onclick="myFunction()" id="I3" class="img" src="./BUNNY.jpg"></span>
+<span id="S4" class="dot"><img onclick="myFunction()" id="I4" class="img" src="./BUNNY.jpg"></span>
+<span id="S5" class="dot"><img onclick="myFunction()" id="I5" class="img" src="./BUNNY.jpg"></span>
+</p>
+
+</center><br><br>
+<input id="start" type="button" name="xyz" value="Start Game" onclick="startCount()"><input type="button" name="zyx" value="End Game" id="end" onclick="zero();stopCount()">
+<p>RULES: HIT THE BUNNY WHEN THEY APPEAR OVER THE CIRCLES <br>
+YOU HAVE 60 SECONDS</p>
+<h2>Game Score:<i id="scoress">0</i></h2>
+<h2>High Score:<i id="Hscoress">0</i></h2>
+<input type="button" name="reset" value="Reset Scores" onclick="reset()" id="reset">
+<script type="text/javascript">
+var	g=0
+var h=0
+	function myFunction() {
+ g = g+1
+document.getElementById("scoress").innerHTML = g;
+ if (h<=g) {
+h=g
+document.getElementById("Hscoress").innerHTML = h;
+};
+};
+
+function zero() {
+g=0
+document.getElementById("scoress").innerHTML = g;
+};
+function reset(){
+	g=0
+	h=0
+	document.getElementById("Hscoress").innerHTML = h;
+    document.getElementById("scoress").innerHTML = g;
+};
+
+</script>
+<h3>TIMER: <b id="demo">60 seconds</b></h3>
+<div id="mydiv"><i style="color: white">Game Developed by:ANUJ ROYAL<br>
+-31 December 2020 12:17pm</i></div>
+</body>
+</html>
